@@ -20,34 +20,17 @@ public class Move : MonoBehaviour
     private Vector3 _velocity;
     private Vector2 _direction;
 
-    public List<Collider> helpers;
+
     
     private void Start()
     {
         _characterController = GetComponent<CharacterController>();
         _playerCamera = GetComponentInChildren<Camera>();
         Cursor.lockState = CursorLockMode.Locked;
-        helpers = new List<Collider>();
     }
 
 
-    void OnTriggerEnter(Collider col)
-    {
-        if (col.tag == "Helpers" && col.isTrigger)
-        {
-            int index = helpers.FindIndex(x => x.gameObject == col.gameObject);
-            if (index == -1) helpers.Add(col);
-        }
-    }
 
-    void OnTriggerExit(Collider col)
-    {
-        if (col.tag == "Helpers" && col.isTrigger)
-        {
-            int index = helpers.FindIndex(x => x.gameObject == col.gameObject);
-            if (index != -1) helpers.RemoveAt(index);
-        }
-    }
 
     private void Update()
     {

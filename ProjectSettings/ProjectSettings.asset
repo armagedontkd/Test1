@@ -705,11 +705,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: 
+  cloudProjectId: 69991f5b-082d-4df5-a300-ec562b92bc31
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: 
-  organizationId: 
+  projectName: Test1
+  organizationId: armagedontkd
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   playerDataPath: 
