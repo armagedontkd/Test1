@@ -170,7 +170,7 @@ public class Player_Move : MonoBehaviour
     {
         if (maxValueStamina >= 100) maxValueStamina = 100f;
         if (maxValueStamina <= 100) maxValueStamina = 0f;
-        textStamina.text = staminaSlider.value.ToString();
+        
         staminaSlider.value = staminaValue;
     }
 }
