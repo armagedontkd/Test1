@@ -5,7 +5,7 @@ public class WallClimb : MonoBehaviour
 {
     public float climbSpeed = 5f; // Скорость взбирания
     public float distanceToWall = 1f; // Расстояние до стены, на котором начинается взбирание
-    [SerializeField] private CharacterController _characterController;
+    [SerializeField] private CharacterController controller;
     private bool isClimbing = false;
     private Vector3 offSet = new Vector3(0f, 1f, 0f);
 
@@ -32,13 +32,14 @@ public class WallClimb : MonoBehaviour
 
         if (isClimbing)
         {
-            _characterController.enabled = false;
+            controller.enabled = false;
             float moveVertical = Input.GetAxis("Vertical"); // Получение ввода для вертикального движения
             transform.Translate(Vector3.up * moveVertical * climbSpeed * Time.deltaTime); // Перемещение вверх
         }
         if (!isClimbing)
         {
-            _characterController.enabled = true;
+            controller.enabled = true;
+            isClimbing = false;
         }
     }
 }
