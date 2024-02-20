@@ -5,7 +5,6 @@ using UnityEngine;
 public class InventoryManager : MonoBehaviour
 {
     public GameObject UIPanel;
-    public GameObject crosshair;
     public Transform inventoryPanel;
     public List<InventorySlot> slots = new List<InventorySlot>();
     public bool isOpened;
@@ -38,12 +37,10 @@ public class InventoryManager : MonoBehaviour
             if (isOpened)
             {
                 UIPanel.SetActive(true);
-                crosshair.SetActive(false);
             }
             else
             {
                 UIPanel.SetActive(false);
-                crosshair.SetActive(true);
             }
         }
         Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
